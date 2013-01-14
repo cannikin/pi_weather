@@ -13,7 +13,7 @@ and humidity in JSON.
 This won't include a guide for installing and running a Sinatra app,
 but here are the basics:
 
-1. Clone this repo
+1. Clone this repo: `git clone git@github.com:cannikin/pi_weather.git`
 2. Run bundler to install required gems: `bundle install`
 3. Start the app. You need to run it as root since the Pi requires root
    access to access the GPIO ports: `sudo ruby app.rb`
