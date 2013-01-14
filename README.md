@@ -21,9 +21,3 @@ but here are the basics:
 Now just point your browser to http://localhost:4567 and you should see the
 temp and humdity. The page will hit the RESTful endpoint every 5 seconds to
 keep the page up-to-date. That endpoint lives at http://localhost:4567/read
-# Raspberry Pi Weather Station
-
-Here's a real simple web app that displays the current temperature
-and humdity as reported by an [SHT15](https://www.sparkfun.com/products/8257).
-
-!(http://cannikin.github.com/pi_weather/screen.png)
