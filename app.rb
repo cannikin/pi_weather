@@ -30,7 +30,7 @@ __END__
 
 html
   head
-    title Office Details
+    title Raspberry Pi Weather Station
     link(href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet" type="text/css")
     script(type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
     meta(name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;")
