@@ -31,40 +31,66 @@ __END__
 html
   head
     title Raspberry Pi Weather Station
-    link(href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200" rel="stylesheet" type="text/css")
     script(type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
     meta(name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;")
     sass:
       body
         margin: 0
         padding: 0
-        font-family: 'Source Sans Pro', Helvetica Neue, sans-serif
-        font-weight: 200
+        font-family: 'Helvetica Neue', sans-serif
+        font-weight: 100
         background-color: #BEF2FF
         color: #6ABFCA
       section
         text-align: center
-        font-size: 500%
         width: 400px
         margin: 100px auto
         padding: 50px 0
         background-color: rgba(255,255,255,0.5)
-        line-height: 2
-      @media (max-width:480px)
-        body
-          margin: 40px
-        section
+        line-height: 1
+        & div:first-child
+          margin: 0 0 4em
+      .value, .symbol
+        font-size: 500%
+      .label
+        display: block
+
+      @media (max-width:568px)
+        .container
           width: 100%
-          margin: 0
+          height: 100%
+        section
+          width: auto
+          margin: 40px
+          overflow: hidden
+          .value, .symbol
+            font-size: 400%
+
+      @media (max-width: 568px) and (min-width: 321px)
+        section
+          div
+            float: left
+            width: 50%
+            margin-bottom: 0
+          & div:first-child
+            margin: 0
+
+      @media (max-width: 320px)
+        section
+          .value, .symbol
+            font-size: 400%
 
   body
-    section
-      #temperature(style="display:none")
-        span.value
-        span.symbol °F
-      #humidity(style="display:none")
-        span.value
-        span.symbol %
+    .container
+      section
+        #temperature(style="display:none")
+          span.value
+          span.symbol °F
+          span.label Temperature
+        #humidity(style="display:none")
+          span.value
+          span.symbol %
+          span.label Relative Humidity
 
     javascript:
       $(function() {
